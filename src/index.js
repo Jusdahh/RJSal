@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css';
 import Menu from './components/Menu';
 import Home from './components/Home';
-import Login from './components/Login';
 import Produtos from './components/Produtos';
+import Produto from './components/Produto';
+import Login from './components/Login';
 import Register from './components/Register';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,9 +17,10 @@ root.render(
     <Menu />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
       <Route path="/produtos" element={<Produtos />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route exact path="/produtos/:id" element={<Produto/>} />
     </Routes>
   </BrowserRouter>
 );
