@@ -44,7 +44,7 @@ export default function Produto() {
         return produto.map((produto) => (
             <>
             <div className="col-md-6">
-                <img src={produto.imagem} alt={produto.nome} height="600px" width="600px"/>
+                <img src={produto.imagem} alt={produto.nome} className="img-fluid"/>
             </div>
             <div className="col-md-6">
                 <h4 className='text-uppercase text-black-50'>

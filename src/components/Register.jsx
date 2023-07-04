@@ -20,13 +20,7 @@ export default function Register() {
       if (success) {
         // Registro bem-sucedido, exibir alerta de sucesso
         alert(message);
-  
-        // Limpar os campos de registro
-        setEmail('');
-        setSenha('');
-        setNome('');
-  
-        // Redirecionar para a página de login
+        // Redirecionar para a página do usuário
         window.location.href = '/login';
       } else {
         // Registro falhou, exibir alerta de erro
@@ -39,14 +33,14 @@ export default function Register() {
     });
   }
   
+  
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        <form className={styles.forms}>
-          {/* <!-- Formulário de Registro --> */}
-          <div className={`${styles.div} ${styles.signup}`}>
+        <div className={styles.forms}>
+          <div className={`${styles.form} ${styles.signup}`}>
             <span className={styles.title}>Signup</span>
-            <div>
+            <div name="signupForm">
               <div className={styles.inputField}>
                 <input
                   type="text"
@@ -62,7 +56,6 @@ export default function Register() {
                   placeholder="Insira seu e-mail aqui"
                   onChange={e => setEmail(e.target.value)}
                 />
-                
               </div>
               <div className={styles.inputField}>
                 <input
@@ -71,30 +64,30 @@ export default function Register() {
                   placeholder="Crie sua senha aqui"
                   onChange={e => setSenha(e.target.value)}
                 />
-                
               </div>
-              
               <div className={styles.checkboxText}>
                 <div className={styles.checkboxContent}>
                   <input type="checkbox" name="termCon" id="termCon" />
-                  <label for="termCon" className="Text">
+                  <label htmlFor="termCon" className={styles.text}>
                     Li e concordo com os Termos de Uso
                   </label>
                 </div>
               </div>
               <div className={`${styles.inputField} ${styles.Btn}`}>
-                <input type="submit" value="Cadastre-se" onClick={registerValidation}/>
+                <input type="submit" value="Cadastre-se" onClick={registerValidation} />
               </div>
             </div>
             <div className={styles.loginSignup}>
-              <span className="text">
+              <span className={styles.text}>
                 Já é um membro?
-                <Link to="/login" className={`${styles.text} ${styles.loginLink}`}>Entre</Link>
+                <Link to="/login" className={`${styles.text} ${styles.loginLink}`}>
+                  Entre
+                </Link>
               </span>
             </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
+    </div>
   );
 }
