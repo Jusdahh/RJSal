@@ -9,9 +9,9 @@ export default function Home() {
         <img src="/assets/banner2.jpg" class="card-img" alt="background" height="550px"/>
         <div class="card-img-overlay d-flex flex-column justify-content-center">
           <div className="container">  
-          <h5 class="card-title display-3 fw-bolder mb-0">TITULO MUITO DOIDO</h5>
+          <h5 class="card-title display-3 fw-bolder mb-0">RJSAIS</h5>
           <p class="card-text lead fs-2">
-            COLOCAR ALGO AQUI
+            Trazendo mais sabor pra você!
           </p>
           </div>
         </div>

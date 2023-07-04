@@ -6,9 +6,11 @@ export default function Menu() {
 
   return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm fixed-top">
   <div class="container">
-    <Link class="navbar-brand fw-bold fs-4" to="/">RJ SAIS</Link>
+    <Link class="navbar-brand fw-bold fs-4" to="/">
+      RJ SAIS
+      </Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,7 +23,7 @@ export default function Menu() {
           <Link class="nav-link" to="/produtos">Produtos</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre nós</a>
+          <a class="nav-link" href="/sobre">Sobre nós</a>
         </li>
 
       </ul>
