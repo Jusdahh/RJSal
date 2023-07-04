@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import { useSelector } from 'react-redux';
 
 export default function Menu() {
-
+  const state = useSelector((state) => state.handleCart);
 
   return (
     <div>
@@ -32,8 +33,8 @@ export default function Menu() {
            <i className="fa fa-sign-in me-1"></i> Login</Link>
         <Link to="/register" className="btn btn-outline-dark ms-2">
            <i className="fa fa-user-plus me-1"></i> Register</Link>
-        <a href="" className="btn btn-outline-dark ms-2">
-           <i className="fa fa-shopping-cart me-1"></i> Carrinho (0)</a>
+        <Link to="/carrinho" className="btn btn-outline-dark ms-2">
+           <i className="fa fa-shopping-cart me-1"></i> Carrinho ({state.length})</Link>
            
            
       </div>

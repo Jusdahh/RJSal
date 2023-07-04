@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import { addCart } from '../redux/action';
 import Skeleton from 'react-loading-skeleton';
 import { Link, useParams } from 'react-router-dom';
 
@@ -7,6 +9,11 @@ export default function Produto() {
     const { id } = useParams();
     const [produto, setProduto] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    const dispatch = useDispatch();
+    const addProduct = (produto) => {
+        dispatch(addCart(produto));
+    }
 
     useEffect(() => {
         setLoading(true);
@@ -18,7 +25,7 @@ export default function Produto() {
         .catch((error) => {
             console.error(error);
         });
-    }, []);
+    }, [id]);
     
     const Loading = () => {
         return (
@@ -51,10 +58,10 @@ export default function Produto() {
                     {/* Trocar por categoria: */}
                     {produto.nome} 
                 </h4>
-                <h1 className='display-5'>{produto.nome}</h1>
+                <h1 className='display-5 text-uppercase'>{produto.nome}</h1>
                 <h3 className="display-6 fw-bold my-4">R$ {produto.preco}</h3>
                 <p className="lead">{produto.descricao}</p>
-                <button className="btn btn-outline-dark btn-lg  px-4 py-2">Adicionar ao Carrinho</button>
+                <button className="btn btn-outline-dark btn-lg  px-4 py-2" onClick={()=>addProduct(produto)}>Adicionar ao Carrinho</button>
                 <Link to='/carrinho' className="btn btn-dark btn-lg ms-2 px-2 py-2">Ir para o Carrinho</Link >
             </div>
             </>

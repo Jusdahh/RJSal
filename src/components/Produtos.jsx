@@ -44,7 +44,7 @@ export default function Produtos() {
     return produtos.map((produto) => (
       <div key={produto.id} className="col-sm-6 col-md-4 col-lg-3">
         <div
-          className="card h-100 text-center p-4"
+          className="card h-100 text-center p-4 text-uppercase"
           style={{ maxWidth: "400px" }}
         >
           <img
