@@ -23,49 +23,49 @@ export default function Produtos() {
 
   const Loading = () => {
     return (
-    <>
-    <div className="col-md-3">
-        <Skeleton height={350}/>
-    </div>
-    <div className="col-md-3">
-        <Skeleton height={350}/>
-    </div>
-    <div className="col-md-3">
-        <Skeleton height={350}/>
-    </div>
-    <div className="col-md-3">
-        <Skeleton height={350}/>
-    </div>
-    </>
+      <>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+      </>
     );
   };
 
-    const ShowProducts = () => {
-        return produtos.map((produto) => (
-            <div key={produto.id} className="col-sm-6 col-md-4 col-lg-3">
-              <div
-                className="card h-100 text-center p-4"
-                style={{ maxWidth: "400px" }}
-              >
-                <img
-                  src={produto.imagem}
-                  className="card-img-top mx-auto"
-                  alt={produto.nome}
-                  style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                />
-                <div className="card-body">
-                  <h5 className="card-title mb-0">
-                    {produto.nome.substring(0, 12)}
-                  </h5>
-                  <p>R${produto.preco}</p>
-                  <Link to={`/produtos/${produto.id}`} className="btn btn-primary">
-                    Ver produto
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))
-    };
+  const ShowProducts = () => {
+    return produtos.map((produto) => (
+      <div key={produto.id} className="col-sm-6 col-md-4 col-lg-3">
+        <div
+          className="card h-100 text-center p-4"
+          style={{ maxWidth: "400px" }}
+        >
+          <img
+            src={produto.imagem}
+            className="card-img-top mx-auto"
+            alt={produto.nome}
+            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+          />
+          <div className="card-body">
+            <h5 className="card-title mb-0">
+              {produto.nome.substring(0, 12)}
+            </h5>
+            <p>R${produto.preco}</p>
+            <Link to={`/produtos/${produto.id}`} className="btn btn-primary">
+              Ver produto
+            </Link>
+          </div>
+        </div>
+      </div>
+    ));
+  };
 
   return (
     <div>
@@ -80,7 +80,7 @@ export default function Produtos() {
         </div>
 
         <div className="row">
-          {loading ? <Loading/> : <ShowProducts/>}
+          {loading ? <Loading /> : <ShowProducts />}
         </div>
       </div>
     </div>

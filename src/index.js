@@ -7,6 +7,7 @@ import Produtos from './components/Produtos';
 import Produto from './components/Produto';
 import Login from './components/Login';
 import Register from './components/Register';
+import Usuario from './components/Usuario';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 
@@ -21,6 +22,7 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route exact path="/produtos/:id" element={<Produto/>} />
+      <Route path="/usuario/:id" element={<Usuario/>}/>
     </Routes>
   </BrowserRouter>
 );
