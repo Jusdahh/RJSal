@@ -20,8 +20,8 @@ export default function Login() {
           // Login bem-sucedido, exibir alerta de sucesso
           alert(message);
 
-          // Redirecionar para a página de produtos
-          window.location.href = "/produtos";
+          // Redirecionar para a página
+          window.location.href = "/";
         } else {
           // Login falhou, exibir alerta de erro
           alert(message);
