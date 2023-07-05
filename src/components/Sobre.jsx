@@ -23,7 +23,7 @@ export default function Sobre() {
                             </p>
                             <ul className="team-icon">
                                 <li>
-                                    <a href="https://github.com/RhuanMalta/RJSal" className="github">
+                                    <a href="https://github.com/RhuanMalta" className="github">
                                     <i className="fa fa-github"></i>
                                     </a>
                                 </li>
