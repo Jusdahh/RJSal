@@ -32,7 +32,7 @@ export default function Register() {
       console.error(error);
     });
   }
-  
+
   
   return (
     <div className={styles.body}>

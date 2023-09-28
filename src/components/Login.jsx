@@ -40,7 +40,6 @@ export default function Login() {
         <div className={styles.forms}>
           <div className={`${styles.form} ${styles.login}`}>
             <span className={styles.title}>Login</span>
-
             <div className={styles.inputField}>
               <input
                 type="email"
