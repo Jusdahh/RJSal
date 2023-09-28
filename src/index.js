@@ -10,11 +10,15 @@ import Register from './components/Register';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import Sobre from './components/Sobre';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Carrinho from './components/Carrinho';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <Provider store={store}>
     <Menu />
     <Routes>
       <Route path="/" element={<Home />} />
@@ -23,8 +27,9 @@ root.render(
       <Route path="/register" element={<Register />} />
       <Route exact path="/produtos/:id" element={<Produto/>} />
       <Route path="/sobre" element={<Sobre/>}/>
+      <Route path="/carrinho" element={<Carrinho/>}/> 
     </Routes>
+    </Provider>
   </BrowserRouter>
 );
-
 
